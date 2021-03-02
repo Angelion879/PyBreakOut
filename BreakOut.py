@@ -1,4 +1,5 @@
 import turtle
+from walls import wall_type
 
 win = turtle.Screen()
 win.title("BreakOut by @Angelion879")
