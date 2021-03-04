@@ -9,4 +9,6 @@ class Brick(turtle.Turtle):
         self.color(color)
         self.goto(position)
 
-wall_type = []
+brick = Brick((-340, 360), 'white')
+
+wall_type = [brick]
