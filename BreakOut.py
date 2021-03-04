@@ -22,14 +22,6 @@ class Ball(turtle.Turtle):
         self.penup()
         self.color('white')
         self.goto(position)
-class Brick(turtle.Turtle):
-    def __init__(self,position,color):
-        super().__init__(shape='square')
-        self.shapesize(stretch_wid=1, stretch_len=2)
-        self.speed(0)
-        self.penup()
-        self.color(color)
-        self.goto(position)
 
 paddle = Paddle((0, -300))
 ball = Ball((0,-279))
