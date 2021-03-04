@@ -1,5 +1,5 @@
 import turtle
-import walls
+from walls import wall_builder
 
 win = turtle.Screen()
 win.title("BreakOut by @Angelion879")
@@ -28,3 +28,4 @@ ball = Ball((0,-279))
 
 while True:
     win.update()
+    wall_builder()

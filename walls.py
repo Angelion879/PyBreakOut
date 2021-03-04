@@ -9,7 +9,12 @@ class Brick(turtle.Turtle):
         self.color('white')
         self.goto(position)
 
-#brick = Brick((-360, 340))
+coord = []
 
-for i in range(-360, 390, 65):
-    brick = Brick((i, 340))
+def wall_builder():
+    global coord
+    for y in range(340, 30, -30):
+        for x in range(-360, 390, 65):
+            brick = Brick((x, y))
+            if (x,y) not in coord:
+                coord.append((x,y))
