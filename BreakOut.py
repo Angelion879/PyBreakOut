@@ -1,5 +1,7 @@
 import turtle
 from walls import wall_builder
+from walls import coord
+from walls import Brick
 
 win = turtle.Screen()
 win.title("BreakOut by @Angelion879")
