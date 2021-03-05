@@ -24,10 +24,47 @@ class Ball(turtle.Turtle):
         self.penup()
         self.color('white')
         self.goto(position)
+        self.dx = 0.3
+        self.dy = 0.3
 
 paddle = Paddle((0, -300))
 ball = Ball((0,-279))
 
+# Functions
+
+def paddle_right():
+    x = paddle.xcor()
+    x+= 20
+    paddle.setx(x)
+
+def paddle_left():
+    x = paddle.xcor()
+    x-=20
+    paddle.setx(x)
+
+# Wall Building 
+#wall_builder()
+#win.update()
+
 while True:
     win.update()
-    wall_builder()
+
+    # Ball movement
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    # Border Colision
+    if ball.xcor() > 390:
+        ball.setx(390)
+        ball.dx *= -1
+    if ball.ycor() > 340:
+        ball.sety(340)
+        ball.dy *= -1
+    if ball.xcor() < -390:
+        ball.setx(-390)
+        ball.dx *= -1
+    if ball.ycor() < -340:
+        paddle.goto(0, -300)
+        ball.goto(0,-279)
+        ball.dy *= -1
+
