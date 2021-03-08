@@ -28,7 +28,7 @@ class Ball(turtle.Turtle):
         self.dy = 0.5
 
 paddle = Paddle((0, -300))
-ball = Ball((1,-279))
+ball = Ball((0,-279))
 
 # Functions
 
@@ -80,8 +80,8 @@ while True:
         ball.dy *= -1
 
     # Bricks colision
-    if ((ball.xcor() - 1), (ball.ycor() +10)) in coord:
+    if ((ball.xcor()), (ball.ycor() +10)) in coord:
         print("YUP, IT IS HERE")
-        brick = Brick(((ball.xcor() - 1), (ball.ycor() +10)), 'black')
-        coord.remove(((ball.xcor() - 1), (ball.ycor() +10)))
+        brick = Brick(((ball.xcor()), (ball.ycor() +10)), 'black')
+        coord.remove(((ball.xcor()), (ball.ycor() +10)))
         ball.dy *= -1
