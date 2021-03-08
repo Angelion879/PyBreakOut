@@ -13,8 +13,7 @@ coord = []
 
 def wall_builder():
     global coord
-    for y in range(340, 30, -30):
-        for x in range(-360, 390, 65):
-            brick = Brick((x, y), 'white')
-            if (x,y) not in coord:
-                coord.append((x,y))
+    brick = Brick((0,0), 'white')
+    brick = Brick((0, 30), 'white')
+    coord.append((0,0))
+    coord.append((0,30))

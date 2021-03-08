@@ -24,11 +24,11 @@ class Ball(turtle.Turtle):
         self.penup()
         self.color('white')
         self.goto(position)
-        self.dx = 3
-        self.dy = 3
+        #self.dx = 1
+        self.dy = 0.5
 
 paddle = Paddle((0, -300))
-ball = Ball((0,-279))
+ball = Ball((1,-279))
 
 # Functions
 
@@ -56,7 +56,7 @@ while True:
     win.update()
 
     # Ball movement
-    ball.setx(ball.xcor() + ball.dx)
+    #ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
 
     # Border Colision
@@ -80,5 +80,3 @@ while True:
         ball.dy *= -1
 
     # Bricks colision
-    if (ball.xcor(), ball.ycor()) in coord:
-        print("YUP, IT IS HERE")
