@@ -80,3 +80,8 @@ while True:
         ball.dy *= -1
 
     # Bricks colision
+    if ((ball.xcor() - 1), (ball.ycor() +10)) in coord:
+        print("YUP, IT IS HERE")
+        brick = Brick(((ball.xcor() - 1), (ball.ycor() +10)), 'black')
+        coord.remove(((ball.xcor() - 1), (ball.ycor() +10)))
+        ball.dy *= -1
