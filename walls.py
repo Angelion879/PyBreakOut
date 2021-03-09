@@ -6,7 +6,7 @@ class Brick(turtle.Turtle):
         self.shapesize(stretch_wid=1, stretch_len=3)
         self.speed(0)
         self.penup()
-        self.color(col)
+        self.color('white')
         self.goto(position)
 
 coord = []
